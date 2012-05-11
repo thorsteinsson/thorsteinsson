@@ -34,7 +34,7 @@
 			if (dead) {
 				lives--
 				if (lives === 0) {
-					window.history.pushState({}, document.title, "/Game_Over!")
+					window.history.replaceState({}, document.title, "/Game_Over!")
 					clearInterval(timer)
 					return
 				}
@@ -50,7 +50,7 @@
 		for (var i = 0; i < lives; i++)
 			state += '♥'
 		state += ':::level_' + level
-		window.history.pushState({}, document.title, "/" + state)
+		window.history.replaceState({}, document.title, "/" + state)
 		
 		// Go faster and faster
 		elapsed++
@@ -61,6 +61,7 @@
 		}
 	};
 
+	window.history.pushState({}, document.title, "/Starting_game...")
 	var timer = setInterval(game, 100)
 	
 	// controls
