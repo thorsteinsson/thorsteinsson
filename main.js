@@ -22,16 +22,14 @@
 		constructor: Game,
 		
 		update: function() {
+			// move enemies
+			this.enemies.shift()
+
 			// 10% chance of enemy getting added
 			if (Math.round(Math.random() * 10) === 4) {
-				this.enemies[this.enemies.length-1] = config.enemies[Math.round(Math.random() * config.enemies.length)]
+				this.enemies.push(config.enemies[Math.round(Math.random() * config.enemies.length)])
 			} else {
-				this.enemies[this.enemies.length-1] = ' '
-			}
-
-			// move enemies
-			for (var i = 1; i < this.enemies.length; i++) {
-				this.enemies[i-1] = this.enemies[i]
+				this.enemies.push(' ')
 			}
 
 			// check for hit
@@ -107,17 +105,19 @@
 	var game = new Game()
 
 	// The url
-	game.addOutput(function() {
-		var first = true
-		return function(msg) {
-			if (first) {
-				first = false
-				window.history.pushState({}, document.title, "/" + msg)
-			} else {
-				window.history.replaceState({}, document.title, "/" + msg)
+	if (window.history.pushState) {
+		game.addOutput(function() {
+			var first = true
+			return function(msg) {
+				if (first) {
+					first = false
+					window.history.pushState({}, document.title, "/" + msg)
+				} else {
+					window.history.replaceState({}, document.title, "/" + msg)
+				}
 			}
-		}
-	}())
+		}())
+	}
 
 	// The title
 	game.addOutput(function(msg) {
@@ -127,16 +127,16 @@
 
 	// The document
 	game.addOutput(function() {
-		var $elem
+		var elem
 		return function(msg) {
-			if (!$elem) {
+			if (!elem) {
 				if ($.isReady) {
-					$elem = $('#game')
+					elem = document.getElementById('game')
 				} else {
 					return
 				}
 			}
-			$elem.text(msg)
+			elem.innerHTML = msg
 		}
 	}())
 
