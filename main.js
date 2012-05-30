@@ -105,7 +105,7 @@
 	var game = new Game()
 
 	// The url
-	if (window.history.pushState) {
+	if (window.history && history.pushState) {
 		game.addOutput(function() {
 			var first = true
 			return function(msg) {
