@@ -12,9 +12,14 @@
 		this.elapsed = 0
 		this.gameover = false
 		this.timer = null
-		this.outputs = jQuery.Callbacks()
+		this.outputs = {}
+		this.activeOutput = 'title'
 
-		for (var i = 0; i < 40; i++)
+		this.output = function(msg) {
+			this.outputs[this.activeOutput](msg)
+		}
+
+		for (var i = 0; i < 30; i++)
 			this.enemies.push(' ')
 	}
 
@@ -67,7 +72,7 @@
 		
 		draw: function() {	
 			if (this.gameover) {
-				this.outputs.fire('Game_Over!')
+				this.output('Game_Over!')
 				return
 			}
 
@@ -77,11 +82,11 @@
 				state += '♥'
 			state += ':::level_' + this.level
 			
-			this.outputs.fire(state)
+			this.output(state)
 		},
 
 		start: function() {
-			this.outputs.fire('Starting game...')
+			this.output('Starting game...')
 			var game = this
 			this.timer = setInterval(function() {
 				game.update()
@@ -97,8 +102,12 @@
 			this.current > 0 && this.current--
 		},
 
-		addOutput: function(output) {
-			this.outputs.add(output)
+		addOutput: function(name, output) {
+			this.outputs[name] = output
+		},
+
+		setOutput: function(name) {
+			this.activeOutput = name
 		}
 	}
 
@@ -106,7 +115,7 @@
 
 	// The url
 	if (window.history && history.pushState) {
-		game.addOutput(function() {
+		game.addOutput('url', function() {
 			var first = true
 			return function(msg) {
 				if (first) {
@@ -120,13 +129,13 @@
 	}
 
 	// The title
-	game.addOutput(function(msg) {
+	game.addOutput('title', function(msg) {
 		document.title = msg;
 		return true
 	})
 
 	// The document
-	game.addOutput(function() {
+	game.addOutput('body', function() {
 		var elem
 		return function(msg) {
 			if (!elem) {
@@ -150,5 +159,11 @@
 
 		if (keyCode === 40)
 			game.moveDown()
-	});
-}(jQuery);
+	})
+
+	$(function() {
+		$('[data-output]').on('click', function() {
+			game.setOutput($(this).data('output'))
+		})
+	})
+}(jQuery)
