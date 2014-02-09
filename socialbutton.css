@@ -1,0 +1,63 @@
+.SocialButton {
+  background: rgba(170, 170, 170, 0.7);
+  border-radius: .75em;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 4.5em;
+  line-height: 4.5em;
+  position: relative;
+  text-align: center;
+  transition: background .3s;
+  width: 15em;
+}
+
+.SocialButton:hover {
+  background: rgba(217, 217, 217, 0.7);
+}
+
+.SocialButton-lid {
+  border-radius: .75em;
+  color: #fff;
+  font-family: 'FontAwesome';
+  height: 4.5em;
+  left: 0;
+  line-height: 4.95em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform-origin: top;
+  transition: transform .3s;
+  width: 15em;
+}
+
+.SocialButton-lid:before {
+  font-size: 200%;
+}
+
+.SocialButton:hover .SocialButton-lid {
+  transform: rotateX(110deg);
+}
+
+.SocialButton--twitter .SocialButton-lid {
+  background: #55acee;
+}
+
+.SocialButton--twitter .SocialButton-lid:before {
+  content: "\f099";
+}
+
+.SocialButton--github .SocialButton-lid {
+  background: #3072b3;
+}
+
+.SocialButton--github .SocialButton-lid:before {
+  content: "\f09b";
+}
+
+.SocialButton--linkedIn .SocialButton-lid {
+  background: #1883bb;
+}
+
+.SocialButton--linkedIn .SocialButton-lid:before {
+  content: "\f0e1";
+}

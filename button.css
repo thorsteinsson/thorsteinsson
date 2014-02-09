@@ -1,0 +1,20 @@
+@import "bower_components/suit-button/button.css";
+
+.Button {
+  background-color: #eee;
+  background-image: linear-gradient(#fff, #dedede);
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  color: #333;
+  font-size: 0.8125em;
+  font-weight: bold;
+  display: inline-block;
+  width: auto;
+}
+
+.Button:hover {
+  border-color: #BBB;
+  background-color: #D9D9D9;
+  background-image: linear-gradient(#F8F8F8,#D9D9D9);
+  box-shadow: none;
+}

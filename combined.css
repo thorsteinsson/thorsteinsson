@@ -1,0 +1,1096 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg'), url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"],
+/* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*! suit-base v0.3.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/* ==========================================================================
+   Dimension utilities
+   ========================================================================== */
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sizeFit,
+.u-sizeFitAlt {
+  display: block !important;
+  float: left !important;
+  width: auto !important;
+}
+
+.u-sizeFitAlt {
+  float: right !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.u-sizeFill {
+  display: block !important;
+  overflow: hidden !important;
+  width: auto !important;
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+
+.u-sizeFillAlt {
+  display: table-cell !important;
+  max-width: 100% !important;
+  width: 10000px !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.u-sizeFull {
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Proportional widths
+   ========================================================================== */
+
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ */
+
+.u-size1of12 {
+  width: 8.333% !important;
+}
+
+.u-size1of10 {
+  width: 10% !important;
+}
+
+.u-size1of8 {
+  width: 12.5% !important;
+}
+
+.u-size1of6,
+.u-size2of12 {
+  width: 16.667% !important;
+}
+
+.u-size1of5,
+.u-size2of10 {
+  width: 20% !important;
+}
+
+.u-size1of4,
+.u-size2of8,
+.u-size3of12 {
+  width: 25% !important;
+}
+
+.u-size3of10 {
+  width: 30% !important;
+}
+
+.u-size1of3,
+.u-size2of6,
+.u-size4of12 {
+  width: 33.333% !important;
+}
+
+.u-size3of8 {
+  width: 37.5% !important;
+}
+
+.u-size2of5,
+.u-size4of10 {
+  width: 40% !important;
+}
+
+.u-size5of12 {
+  width: 41.667% !important;
+}
+
+.u-size1of2,
+.u-size2of4,
+.u-size3of6,
+.u-size4of8,
+.u-size5of10,
+.u-size6of12 {
+  width: 50% !important;
+}
+
+.u-size7of12 {
+  width: 58.333% !important;
+}
+
+.u-size3of5,
+.u-size6of10 {
+  width: 60% !important;
+}
+
+.u-size5of8 {
+  width: 62.5% !important;
+}
+
+.u-size2of3,
+.u-size4of6,
+.u-size8of12 {
+  width: 66.667% !important;
+}
+
+.u-size7of10 {
+  width: 70% !important;
+}
+
+.u-size3of4,
+.u-size6of8,
+.u-size9of12 {
+  width: 75% !important;
+}
+
+.u-size4of5,
+.u-size8of10 {
+  width: 80% !important;
+}
+
+.u-size5of6,
+.u-size10of12 {
+  width: 83.333% !important;
+}
+
+.u-size7of8 {
+  width: 87.5% !important;
+}
+
+.u-size9of10 {
+  width: 90% !important;
+}
+
+.u-size11of12 {
+  width: 91.667% !important;
+}
+
+/* ==========================================================================
+   Text utilities
+   ========================================================================== */
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-textCenter {
+  text-align: center !important;
+}
+
+.u-textLeft {
+  text-align: left !important;
+}
+
+.u-textRight {
+  text-align: right !important;
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+  max-width: 100%;
+  /* 1 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  /* 2 */
+}
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+  word-wrap: break-word !important;
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-textInheritColor {
+  color: inherit !important;
+}
+
+/**
+ * Inherit the ancestor's text color for all states.
+ */
+
+.u-textInheritAllColor,
+.u-textInheritAllColor:hover,
+.u-textInheritAllColor:focus,
+.u-textInheritAllColor:active {
+  color: inherit !important;
+}
+
+/*! suit-grid v1.1.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   SUIT: Grid
+   ========================================================================== */
+
+/**
+ * Core grid component
+ *
+ * DO NOT apply dimension or offset utilities to the `Grid` element. All cell
+ * widths and offsets should be applied to child grid cells.
+ *
+ * Example uses:
+ *
+ * <div class="Grid [Grid--alignCenter|Grid--alignRight]">
+ *     <div class="Grid-cell [Grid-cell--center] u-size1of2"></div>
+ *     <div class="Grid-cell u-size1of2"></div>
+ *     <div class="Grid-cell u-size1of3"></div>
+ *     <div class="Grid-cell u-size1of3"></div>
+ * </div>
+ */
+
+/* Grid container
+   ========================================================================== */
+
+/**
+ * All content must be contained within child `Grid-cell` elements.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Ensure consistent default alignment.
+ * 3. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
+ */
+
+.Grid {
+  display: block;
+  /* 1 */
+  padding: 0;
+  /* 1 */
+  margin: 0;
+  /* 1 */
+  text-align: left;
+  /* 2 */
+  font-size: 0;
+  /* 3 */
+}
+
+/**
+ * Modifier: center align all grid cells
+ */
+
+.Grid--alignCenter {
+  text-align: center;
+}
+
+/**
+ * Modifier: right align all grid cells
+ */
+
+.Grid--alignRight {
+  text-align: right;
+}
+
+/**
+ * Modifier: middle-align grid cells
+ */
+
+.Grid--alignMiddle > .Grid-cell {
+  vertical-align: middle;
+}
+
+/**
+ * Modifier: bottom-align grid cells
+ */
+
+.Grid--alignBottom > .Grid-cell {
+  vertical-align: bottom;
+}
+
+/* Grid cell
+   ========================================================================== */
+
+/**
+ * No explicit width by default. Rely on combining `Grid-cell` with a dimension
+ * utility or a component class that extends 'grid'.
+ *
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Reset font size change made in `Grid`.
+ * 3. Keeps content correctly aligned with the grid direction.
+ * 4. Controls vertical positioning of units.
+ * 5. Make cells full-width by default.
+ */
+
+.Grid-cell {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  /* 1 */
+  font-size: 1rem;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  /* 3 */
+  vertical-align: top;
+  /* 4 */
+  width: 100%;
+  /* 5 */
+}
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `Grid` object.
+ */
+
+.Grid-cell--center {
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background: url(images/low_contrast_linen.png);
+}
+
+.Title {
+  color: #222;
+  font: 11em 'Myriad W01 Regular';
+  position: absolute;
+  text-shadow: 0 2px 3px #555;
+  top: 10%;
+  opacity: 0.8;
+  -ms-filter: "alpha(opacity=80)";
+}
+
+.View {
+  -webkit-perspective: 50em;
+  perspective: 50em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+}
+
+/*! suit-button v3.0.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   SUIT: Button
+   ========================================================================== */
+
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ *
+ * Recommended use:
+ *
+ * <a class="Button [Button--modifier]" role="button" href="[url]">Button text</a>
+ * <button class="Button [Button--modifier]" type="submit">Button text</button>
+ * <input class="Button [Button--modifier]" type="submit" value="Button text">
+ */
+
+/**
+ * Button template
+ *
+ * Build on this component using rulesets in your application-level CSS.
+ *
+ * 1. Corrects inability to style clickable `input` types in iOS
+ * 2. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 3. Inherit text color from ancestor.
+ * 4. Take up the full width of the parent context.
+ * 5. Inherit font styles from ancestor.
+ * 6. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
+ * 7. Prevent button text from being selectable.
+ * 8. Make sure `input` will wrap text across multiple lines.
+ */
+
+.Button {
+  -webkit-appearance: none;
+  /* 1 */
+  background: transparent;
+  border: 1px solid;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 2 */
+  color: inherit;
+  /* 3 */
+  cursor: pointer;
+  display: block;
+  /* 4 */
+  font: inherit;
+  /* 5 */
+  line-height: normal;
+  /* 6 */
+  margin: 0;
+  padding: 0.4em 0.75em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* 7 */
+  white-space: normal;
+  /* 8 */
+  width: 100%;
+  /* 4 */
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+  text-decoration: none;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+  cursor: default;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.Button {
+  background-color: #eee;
+  background-image: linear-gradient(#fff, #dedede);
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  color: #333;
+  font-size: 0.8125em;
+  font-weight: bold;
+  display: inline-block;
+  width: auto;
+}
+
+.Button:hover {
+  border-color: #BBB;
+  background-color: #D9D9D9;
+  background-image: linear-gradient(#F8F8F8,#D9D9D9);
+  box-shadow: none;
+}
+
+.SocialButton {
+  background: rgba(170, 170, 170, 0.7);
+  border-radius: .75em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 4.5em;
+  line-height: 4.5em;
+  position: relative;
+  text-align: center;
+  transition: background .3s;
+  width: 15em;
+}
+
+.SocialButton:hover {
+  background: rgba(217, 217, 217, 0.7);
+}
+
+.SocialButton-lid {
+  border-radius: .75em;
+  color: #fff;
+  font-family: 'FontAwesome';
+  height: 4.5em;
+  left: 0;
+  line-height: 4.95em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  width: 15em;
+}
+
+.SocialButton-lid:before {
+  font-size: 200%;
+}
+
+.SocialButton:hover .SocialButton-lid {
+  -webkit-transform: rotateX(110deg);
+  transform: rotateX(110deg);
+}
+
+.SocialButton--twitter .SocialButton-lid {
+  background: #55acee;
+}
+
+.SocialButton--twitter .SocialButton-lid:before {
+  content: "\f099";
+}
+
+.SocialButton--github .SocialButton-lid {
+  background: #3072b3;
+}
+
+.SocialButton--github .SocialButton-lid:before {
+  content: "\f09b";
+}
+
+.SocialButton--linkedIn .SocialButton-lid {
+  background: #1883bb;
+}
+
+.SocialButton--linkedIn .SocialButton-lid:before {
+  content: "\f0e1";
+}
+
+@media screen and (max-width: 65em) {
+  body,
+  .SocialButton {
+    font-size: 0.65em;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  body {
+    font-size: 0.3em;
+  }
+
+  .v1-u-sizeFill {
+    display: block !important;
+    margin-bottom: 1em;
+    width: auto !important;
+  }
+}
