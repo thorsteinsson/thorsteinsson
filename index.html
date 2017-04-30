@@ -2,35 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ægir Giraldo Þorsteinsson</title>
-    <link rel="stylesheet" href="http://fast.fonts.net/cssapi/8275d73b-37aa-4685-9d50-6ea8d0e42116.css"/>
-    <link rel="stylesheet" href="combined.css">
+    <title>Ægir Þorsteinsson</title>
+    <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-family: Sintony, sans-serif;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      a {
+        color: #0087be;
+        position: relative;
+        text-decoration: none;
+      }
+
+      a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #0087be;
+        transform: scaleX(0);
+        transition: transform 200ms;
+      }
+
+      a:hover:after {
+        transform: scaleX(1);
+      }
+
+      p {
+        margin: 0.5em 0;
+      }
+    </style>
   </head>
   <body>
-    <h1 class="Title u-textCenter">Aegir Giraldo Thorsteinsson</h1>
-    <div class="View">
-      <div class="Grid Grid--alignCenter">
-        <div class="Grid-cell u-size1of3 v1-u-sizeFill u-textCenter">
-          <div class="SocialButton SocialButton--linkedIn">
-            <a href="http://www.linkedin.com/in/thorsteinsson" role="button" class="Button">View profile</a>
-            <div class="SocialButton-lid"></div>
-          </div>
-        </div>
-        
-        <div class="Grid-cell u-size1of3 v1-u-sizeFill u-textCenter">
-          <div class="SocialButton SocialButton--twitter">
-            <a href="https://twitter.com/intent/follow?screen_name=thorsteinsson" role="button" class="Button">Follow @thorsteinsson</a>
-            <div class="SocialButton-lid"></div>
-          </div>
-        </div>
-
-        <div class="Grid-cell u-size1of3 v1-u-sizeFill u-textCenter">
-          <div class="SocialButton SocialButton--github">
-            <a href="https://github.com/thorsteinsson" role="button" class="Button">View repos</a>
-            <div class="SocialButton-lid"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1 class="name">Hey! I'm Ægir, a.k.a. 👁👂🏻</h1>
+    <p>I'm a Front-End Engineer at <a href="https://aranja.com">Aranja</a> and curator of <a href="https://jsconf.is">JSConf Iceland</a>.</p>
+    <p>Find me on <a href="https://twitter.com/thorsteinsson">Twitter</a>, <a href="https://github.com/thorsteinsson">Github</a> and <a href="http://www.linkedin.com/in/thorsteinsson">LinkedIn</a>.</p>
   </body>
 </html>
